@@ -1,0 +1,21 @@
+/* Login */
+
+.color{
+    color: #155263;
+}
+
+.login{
+    height: 100vh;
+    background-image: url(../assets/bg/login-bg.svg);
+}
+.login-form{
+    padding: 3rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.login-btn{
+    background-color: #155263;
+}
+
+input{
+    box-shadow: #8181813b 0px 4px 8px !important;
+}

@@ -1,0 +1,40 @@
+.filter{
+    position: static;
+    top: 0;
+}
+.card-image{
+    aspect-ratio: 2/2.3;
+    object-fit: cover;
+}
+.movie-card-footer{
+    background-color: #155263;
+    color: white !important;
+    text-decoration: none;
+}
+.movie-info{
+    margin-block: 0;
+    font-size: 0.9rem;
+}
+.movie-info span{
+    text-decoration: initial;
+    display: inline-block;
+    width: 6rem;
+}
+
+.filter-text{
+    padding-inline-start: 0.6rem;
+    margin-bottom: 1rem;
+    color: #155263;
+}
+
+.filter-btn{
+    background-color: white;
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #1e5b6c3b;
+    box-shadow: #8181813b 0px 4px 8px;
+}
+
+

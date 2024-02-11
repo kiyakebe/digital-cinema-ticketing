@@ -1,0 +1,30 @@
+.nav-link {
+  font-weight: 600;
+}
+.nav-link {
+  color: black !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-nav {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 4.5rem;
+    left: 0;
+    border-radius: 1rem;
+  }
+  .nav-link {
+    margin-block: 0.5rem;
+    padding-inline: 1rem;
+    color: rgb(29, 28, 28) !important;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
