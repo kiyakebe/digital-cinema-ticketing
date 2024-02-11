@@ -37,4 +37,19 @@
     box-shadow: #8181813b 0px 4px 8px;
 }
 
+.card-image-book{
+    border-radius: 1rem;
+}
 
+.book-btn{
+    background-color: #155263;
+    color: white !important;
+    text-decoration: none;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+}
+
+.itallic-txt{
+    font-style: italic;
+}

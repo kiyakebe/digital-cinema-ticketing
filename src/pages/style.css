@@ -19,3 +19,22 @@
 input{
     box-shadow: #8181813b 0px 4px 8px !important;
 }
+
+
+.tickets{
+    height: 80vh;
+}
+
+.ticket-img{
+    /* mix-blend-mode: darken; */
+}
+
+.ticket_card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-right: 5px solid #155263;
+}
+
+.ticket-card-image{
+    aspect-ratio: 2/2.3;
+    object-fit: cover;
+}

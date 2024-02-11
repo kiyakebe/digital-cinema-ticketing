@@ -1,26 +1,30 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
+import Booking from "./Book";
 
-interface Movie {
+export interface Movie {
+  movie_id: number;
   movie_name: string;
   movie_description: string;
   video_url: string;
-  duration: number;
+  duration_in_minute: number;
   cover_image: string;
   date: string;
   start_time: string;
 }
 
 const MovieCard = ({
+  movie_id,
   movie_name,
-  movie_description,
   video_url,
-  duration,
+  duration_in_minute,
   cover_image,
   date,
   start_time,
 }: Movie) => {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <div className="p-3 col-12 col-md-6 col-lg-3">
       <div className="card">
@@ -34,11 +38,8 @@ const MovieCard = ({
             <span>Name: </span> {movie_name}
           </h5>
           <p className="card-text movie-info fw-medium">
-            <span>Description: </span> {movie_description}
-          </p>
-          <p className="card-text movie-info fw-medium">
             <span>Duration: </span>
-            {duration}min
+            {duration_in_minute}min
           </p>
           <p className="card-text movie-info fw-medium">
             <span>Date: </span>
@@ -52,7 +53,17 @@ const MovieCard = ({
             Watch Trailer Here
           </a>
         </div>
-        <button className="card-footer movie-card-footer">Book Now</button>
+        <button
+          className="card-footer movie-card-footer"
+          onClick={() => setModalShow(true)}
+        >
+          Book Now
+        </button>
+        <Booking
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          movie_id={movie_id}
+        />
       </div>
     </div>
   );
@@ -80,9 +91,11 @@ const MoviesDisplay = () => {
           movies.map((movie) => {
             return (
               <MovieCard
+                key={movie.movie_name}
+                movie_id={movie.movie_id}
                 movie_name={movie?.movie_name}
                 movie_description="hjkshfd"
-                duration={movie.duration}
+                duration_in_minute={movie.duration_in_minute}
                 date={movie.date}
                 start_time={movie.start_time}
                 video_url={movie.video_url}

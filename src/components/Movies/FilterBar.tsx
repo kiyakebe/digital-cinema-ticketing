@@ -31,7 +31,7 @@ const FilterBar = () => {
 
           {genras
             ? genras.map((genra) => {
-                return <GenraButton name={genra} />;
+                return <GenraButton name={genra} key={genra}/>;
               })
             : <h6>Genra not avoilable</h6>}
         </div>

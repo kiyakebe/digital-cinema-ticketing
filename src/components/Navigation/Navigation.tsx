@@ -9,7 +9,7 @@ const Navigation = () => {
   return (
 <nav className="navbar navbar-expand-md py-3" aria-label="Main Navigation" role="navigation">
     <div className="container-md">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="/">
         <img src={logo} alt="Roof Master" style={{width: "2rem"}}/>
       </a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">

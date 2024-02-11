@@ -42,11 +42,12 @@ const Register = () => {
     axios
       .post("http://127.0.0.1:8000/cinema/register/", formData)
       .then((res) => {
-        console.log(res);
+        localStorage.setItem("token", res.data.email)
         navigate("/movies")
       })
       .catch((e) => {
         console.log(e);
+        console.log("eeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrooooooooooooooooooooooooooooooooorrrrrrrrrrrrrrrrrrrrrrrrrrsssssssssssssssss")
       });
   };
 

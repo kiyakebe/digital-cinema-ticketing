@@ -26,11 +26,11 @@ const Login = () => {
     const formData = new FormData();
     formData.append("email", data.email)
     formData.append("password", data.password)
-
+    
     axios
       .post("http://127.0.0.1:8000/cinema/login/", formData)
       .then((res) => {
-        // console.log(res.data);
+        localStorage.setItem("token", res.data.email)
         navigate("/movies");
       })
       .catch((e) => {
